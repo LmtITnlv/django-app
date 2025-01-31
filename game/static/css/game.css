@@ -49,3 +49,9 @@
     transform: scale(1.2); /* 设置悬停时的缩放效果 */
     transition: transform 200ms ease-in-out; /* 设置过渡效果 */
 }
+
+.ac-game-playground{
+    width: 100%; /* 宽度 */
+    height: 100%; /*高度*/
+    user-select: none; /*禁用右键弹菜单*/
+}
