@@ -1,0 +1,57 @@
+/* 游戏菜单的样式设置 */
+.ac-game-menu {
+    width: 100%; /* 设置菜单宽度为100% */
+    height: 100%; /* 设置菜单高度为100% */
+    background: url("/static/image/menu/background.png") no-repeat center / contain, 
+                linear-gradient(to bottom, #122717, #b665b9); /* 图片背景在渐变背景之上 */
+    user-select: none;
+    background-position: center; /* 设置背景图片居中 */
+    position: relative; /* 添加相对定位，使子元素可以绝对定位 */
+}
+
+.ac-game-menu-field {
+    position: absolute; /* 将定位方式改为绝对定位 */
+    left: 50%; /* 修改: 距离左侧50%，用于水平居中 */
+    bottom: 20px; /* 保持: 距离底部20px */
+    transform: translateX(-50%); /* 修改: 使用transform水平居中 */
+    width: 80%; /* 调整宽度为视口宽度的80% */
+    max-width: 600px; /* 设置最大宽度 */
+    height: auto; /* 设置高度为自动 */
+    max-height: 400px; /* 设置最大高度 */
+    display: flex; /* 添加弹性布局 */
+    flex-direction: column; /* 设置子元素垂直排列 */
+    align-items: center; /* 设置子元素垂直居中 */
+    justify-content: center; /* 设置子元素水平居中 */
+}
+
+/* 游戏菜单字段项的样式设置 */
+.ac-game-menu-field-item {
+    color: white; /* 设置文字颜色为白色 */
+    height: 6vh; /* 设置高度为视口高度的6% */
+    width: auto; /* 设置宽度为自动 */
+    max-width: 20vw; /* 设置最大宽度为视口宽度的20% */
+    font-size: 3vw; /* 设置字体大小为视口宽度的3% */
+    font-style: normal; /* 设置字体样式为正常 */
+    padding: 1.5vh; /* 设置内边距为视口高度的1.5% */
+    text-align: center; /* 设置文本居中对齐 */
+    backdrop-filter: blur(10px); /* 添加磨砂效果 */
+    border-radius: 15px; /* 设置圆角半径为15px */
+    letter-spacing: 0.3vw; /* 设置字母间距为视口宽度的0.3% */
+    cursor: pointer; /* 设置鼠标悬停时的光标为指针 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 设置阴影效果 */
+    display: flex; /* 添加弹性布局 */
+    align-items: center; /* 设置子元素垂直居中 */
+    justify-content: center; /* 设置子元素水平居中 */
+}
+
+/* 游戏菜单字段项悬停时的样式设置 */
+.ac-game-menu-field-item:hover {
+    transform: scale(1.2); /* 设置悬停时的缩放效果 */
+    transition: transform 200ms ease-in-out; /* 设置过渡效果 */
+}
+
+.ac-game-playground{
+    width: 100%; /* 宽度 */
+    height: 100%; /*高度*/
+    user-select: none; /*禁用右键弹菜单*/
+}
