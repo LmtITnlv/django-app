@@ -5,6 +5,7 @@ class Settings {
         if (this.root.AcWingOS) this.platform = "ACAPP";
         this.username = "";
         this.photo = "";
+
         this.$settings = $(`
 <div class="ac-game-settings">
     <div class="ac-game-settings-login">
@@ -71,7 +72,7 @@ class Settings {
         </div>
         <br>
         <div class="ac-game-settings-acwing">
-            <img width="30" src="http://app165.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
+            <img width="30" src="https://app165.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
             <br>
             <div>
                 AcWing一键登录
@@ -150,12 +151,11 @@ class Settings {
             },
             success: function(resp) {
                 console.log(resp);
-        if (resp.result === "success") {
-            outer.root.$settings.remove();  // 完全移除登录界面
-            outer.root.menu.show();  // 显示菜单界面
-        } else {
-            outer.$login_error_message.html("用户名或密码错误");
-        }
+                if (resp.result === "success") {
+                    location.reload();
+                } else {
+                    outer.$login_error_message.html(resp.result);
+                }
             }
         });
     }
