@@ -171,9 +171,18 @@
     transition: transform 200ms ease-in-out; /* 设置过渡效果 */
 }
 
-.ac-game-playground{
-    width: 100%; /* 宽度 */
-    height: 100%; /*高度*/
-    user-select: none; /*禁用右键弹菜单*/
+.ac-game-playground {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    background-color: grey;
 }
+
+.ac-game-playground > canvas {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
